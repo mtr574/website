@@ -1,0 +1,19 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "My own web-site & CV developed with Pug, SCSS, Angular & Bootstrap.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mtr574/website.git"
+  },
+  "author": "Nate Ben",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mtr574/website/issues"
+  },
+  "homepage": "https://github.com/mtr574/website#readme"
+}
