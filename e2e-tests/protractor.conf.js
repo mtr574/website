@@ -2,21 +2,17 @@
 exports.config = {
 
   allScriptsTimeout: 11000,
-
-  specs: [
-    '*.js'
-  ],
-
+  specs: ['./e2e/**/*.js'],
   capabilities: {
     'browserName': 'chrome'
   },
-
+  directConnect: true,
   baseUrl: 'http://localhost:8000/',
-
   framework: 'jasmine',
-
   jasmineNodeOpts: {
-    defaultTimeoutInterval: 30000
+    showColors: true,
+    defaultTimeoutInterval: 30000,
+    print: function() {}
   }
 
 };
