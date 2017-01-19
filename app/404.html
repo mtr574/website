@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>404</title>
+        <link rel="stylesheet" href="bower_components/bulma/css/bulma.css" media="screen" title="no title">
+        <style>
+            .hero.is-primary {
+                background-color: white;
+            }
+            .hero.is-primary a {
+                color: #00d1b2;
+            }
+            .hero.is-primary .subtitle,
+            .hero.is-primary .title {
+                color: #000;
+            }
+
+            #svgContainer {
+                width: 100%;
+                height: 250px;
+                background-color: white;
+                margin: 1em;
+            }
+
+        </style>
+    </head>
+    <body>
+        <section class="hero is-fullheight is-primary">
+            <div class="hero-body">
+                <div class="container has-text-centered">
+                    <h3 class="title is-2">
+                        error 404!
+                    </h3>
+                    <h4 class="subtitle is-4">you'r looking for something you cant reach...</h4>
+                    <a onclick="window.history.back();">go back</a>
+                    <div id="svgContainer"></div>
+                </div>
+            </div>
+        </section>
+        <script src='http://doctrinedesign.com/vecteezy/bodymovin.js'></script>
+        <script src='http://www.doctrinedesign.com/vecteezy/space404/data.js'></script>
+        <script>
+            var svgContainer = document.getElementById('svgContainer');
+            var animItem = bodymovin.loadAnimation({wrapper: svgContainer, animType: 'svg', loop: true, animationData: JSON.parse(animationData)});
+        </script>
+    </body>
+</html>
