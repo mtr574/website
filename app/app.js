@@ -1,16 +1,28 @@
-var app = angular.module('nate', ['ngRoute']);
+var app = angular.module('nate', ['ui.router']);
 
 // Declare app level module which depends on views, and components
-// app.config([
-//     '$locationProvider',
-//     '$routeProvider',
-//     function($locationProvider, $routeProvider) {
-//         $locationProvider.hashPrefix('/').html5Mode(true);
-//         $routeProvider.when('/', {templateUrl: '/index.html'});
-//         $routeProvider.when('/404', {templateUrl: 'static/404.html'});
-//         $routeProvider.otherwise({redirectTo: '/404'});
-//     }
-// ]);
+app.config(function($locationProvider, $urlRouterProvider, $stateProvider) {
+    $locationProvider.html5Mode(true);
+    $urlRouterProvider.otherwise('/');
+    var helloState = {
+            name: 'hello',
+            url: '/hello',
+            template: '<h3>hello world!</h3>'
+        },
+        aboutState = {
+            name: 'about',
+            url: '/about',
+            template: '<h3>Its the UI-Router hello world app!</h3>'
+        },
+        page404 = {
+            name: '404',
+            url: '/404',
+            templateUrl: 'static/404.html'
+        }
+
+    $stateProvider.state(helloState);
+    $stateProvider.state(aboutState);
+});
 
 app.controller('main', function($scope) {
     $scope.menu_items = [
