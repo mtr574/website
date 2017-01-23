@@ -4,37 +4,45 @@
 <!--[if IE 8]> <html lang="en" ng-app="nate" class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
 <html lang="en" ng-app="nate" class="no-js">
-    <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Nate Ben</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
-        <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
-        <link rel="stylesheet" href="bower_components/bulma/css/bulma.css" media="screen" title="no title">
-        <link rel="stylesheet" href="app.css">
-        <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
-        <base href="/" target="_blank">
-    </head>
-    <body ng-controller="main">
-        <ul>
-            <li ng-repeat="i in menu_items">
-                <a ng-href="{{ i.link }}">{{ i.title }}</a>
-            </li>
-        </ul>
-        <!-- <main-menu></main-menu> -->
+<!--<![endif]-->
 
+<head>
+    <base href="/" target="_blank">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>Nate Ben</title>
+    <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+    <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+    <link rel="stylesheet" href="bower_components/bulma/css/bulma.css" media="screen" title="no title">
+    <link rel="stylesheet" href="app.css">
+</head>
+
+<body ng-controller="main" ng-cloak>
+    <div class="container">
+        <div class="header">
+            <p class="title is-2">Netanelben.info</p>
+        </div>
+        <div class="columns main-content">
+            <div class="column side-pane">
+                <main-menu></main-menu>
+            </div>
+            <div class="column content">
+                <ng-view></ng-view>
+                <main-content></main-content>
+            </div>
+        </div>
         <!--[if lt IE 7]> <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p> <![endif]-->
+    </div>
+    <app-footer></app-footer>
 
-        <a ui-sref="hello" ui-sref-active="active">Hello</a>
-        <a ui-sref="about" ui-sref-active="active">About</a>
+    <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="config.js"></script>
+    <script src="routes.js"></script>
+    <script src="app.js"></script>
+</body>
 
-        <ui-view></ui-view>
-
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.js"></script>
-        <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-        <script src="app.js"></script>
-    </body>
 </html>

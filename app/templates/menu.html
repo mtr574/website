@@ -1,1 +1,7 @@
-this is the menu
+<div class="app-menu tile is-parent">
+  <ul>
+      <li ng-repeat="i in menu_items">
+          <a ng-href="{{ i.href }}">{{ i.name }}</a>
+      </li>
+  </ul>
+</div>

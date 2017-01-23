@@ -1,23 +1,21 @@
-.menu {
-    list-style: none;
-    border-bottom: 0.1em solid black;
-    margin-bottom: 2em;
-    padding: 0 0 0.5em;
+html, body {
+  min-height: 100vh;
 }
 
-.menu:before {
-    content: "[";
+.header, .main-content {
+  margin-bottom: 5em;
 }
 
-.menu:after {
-    content: "]";
+.main-content {
+  min-height: 50vh;
 }
 
-.menu>li {
-    display: inline;
+.container {
+  max-width: 1200px;
+  padding: 3em 2em;
 }
 
-.menu>li+li:before {
-    content: "|";
-    padding-right: 0.3em;
+.side-pane {
+  max-width: 300px;
+  padding: 0.75rem;
 }
