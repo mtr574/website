@@ -30,7 +30,6 @@
             </div>
             <div class="column content">
                 <ng-view></ng-view>
-                <main-content></main-content>
             </div>
         </div>
         <!--[if lt IE 7]> <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p> <![endif]-->
@@ -40,9 +39,21 @@
     <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/smooth-scroll/dist/js/smooth-scroll.min.js"></script>
+    <script src="content/js/github_buttons.js"></script>
     <script src="config.js"></script>
     <script src="routes.js"></script>
     <script src="app.js"></script>
+    <script type="text/javascript">
+        smoothScroll.init({
+            selector: '[data-scroll]', // Selector for links (must be a class, ID, data attribute, or element tag)
+            selectorHeader: null, // Selector for fixed headers (must be a valid CSS selector) [optional]
+            speed: 500, // Integer. How fast to complete the scroll in milliseconds
+            easing: 'easeInOutCubic', // Easing pattern to use
+            offset: 0, // Integer. How far to offset the scrolling anchor location in pixels
+            callback: function(anchor, toggle) {} // Function to run after scrolling
+        });
+    </script>
 </body>
 
 </html>

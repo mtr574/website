@@ -9,7 +9,6 @@ app.config(function($routeProvider, $locationProvider, config) {
         .when("/hello", config.routes.hello)
         .when("/blog", config.routes.blog)
         .when("/projects", config.routes.projects)
-        .when("/resume", config.routes.resume)
         .otherwise({
             redirectTo: 'static/404.html'
         });

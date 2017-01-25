@@ -1,11 +1,208 @@
-<div class="">
-    <div class="tile is-parent">
-        <article class="tile is-child notification is-danger">
-            <p class="title">Resume</p>
-            <p class="subtitle">Aligned with the right tile</p>
-            <div class="content">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
+<head>
+    <meta charset='UTF-8'>
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+    <link rel='stylesheet prefetch' href='http://vorillaz.github.io/devicons/css/devicons.css'>
+    <style class="cp-pen-styles">
+        @charset "UTF-8";
+        @import url("https://fonts.googleapis.com/css?family=Ubuntu");
+        body {
+            font-family: 'Ubuntu', sans-serif;
+            user-select: none;
+        }
+        
+        p {
+            margin-bottom: 0;
+        }
+        
+        .headline {
+            background: #eee;
+            padding: 3em 2em;
+        }
+        
+        .panel-body {
+            padding-top: 0;
+        }
+        
+        .side-info h4 {
+            text-transform: capitalize;
+        }
+        
+        .side-info>div {
+            margin: 0 0 3em 0;
+        }
+        
+        .side-info .list-group-item {
+            border: 0;
+            padding: 0.1em 1em;
+        }
+        
+        .content-panel {
+            margin: 0 0 3em 0;
+        }
+        
+        .content-panel>div>div {
+            padding-left: 0;
+        }
+        
+        .text-muted:before {
+            content: '§';
+            font-size: 12px;
+            margin: 0 5px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" ng-app="cv">
+        <div class="row" ng-controller="cv_ctrl">
+            <div class="col-xs-12 well headline">
+                <div class="text-center">
+                    <h2>{{ cv.headline.title }}</h2>
+                    <h4>{{ cv.headline.sub_title }}</h4>
+                </div>
             </div>
-        </article>
+            <div class="col-xs-3 side-info">
+                <div class="contact_info">
+                    <h4>{{ cv.contact_info.title }}</h4>
+                    <ul class="list-group">
+                        <li class="list-group-item" ng-repeat="i in cv.contact_info.items"><span>{{ i }}</span></li>
+                    </ul>
+                </div>
+                <div class="skills">
+                    <h4>{{ cv.skills.title }}</h4>
+                    <ul class="list-group">
+                        <h6>{{ cv.skills.proficient.title }}</h6>
+                        <li class="list-group-item" ng-repeat="s in cv.skills.proficient.items"><span ng-class="{{s | lowercase }}">{{ s }}</span></li>
+                    </ul>
+                    <ul class="list-group">
+                        <h6>{{ cv.skills.comfortable.title }}</h6>
+                        <li class="list-group-item" ng-repeat="s in cv.skills.comfortable.items"><span>{{ s }}</span></li>
+                    </ul>
+                    <ul class="list-group">
+                        <h6>{{ cv.skills.familier.title }}</h6>
+                        <li class="list-group-item" ng-repeat="s in cv.skills.familier.items"><span>{{ s }}</span></li>
+                    </ul>
+                </div>
+                <div class="contact_info">
+                    <h4>{{ cv.languages.title }}</h4>
+                    <ul class="list-group">
+                        <li class="list-group-item" ng-repeat="i in cv.languages.info"><span>{{ i.item }}</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xs-9 content">
+                <div class="content-panel projects">
+                    <h4>Projects</h4>
+                    <div class="panel-body" ng-repeat="pr in cv.content.projects">
+                        <div class="col-xs-6">
+                            <h5>{{ pr.title }}</h5>
+                        </div>
+                        <div class="col-xs-6"><a ng-href="{{ pr.link }}">{{ pr.link }}</a></div>
+                        <div class="col-xs-12">
+                            <p>{{ pr.description }}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-panel experience">
+                    <h4>Experience</h4>
+                    <div class="panel-body" ng-repeat="ex in cv.content.experience">
+                        <div class="col-xs-2"><span>{{ ex.time }}</span></div>
+                        <div class="col-xs-10"><span>{{ ex.company }}</span><span>{{ ex.title }}</span>
+                            <p class="text-muted" ng-repeat="note in ex.notes">{{ note }}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-panel education">
+                    <h4>Education</h4>
+                    <div class="panel-body" ng-repeat="ed in cv.content.education">
+                        <div class="col-xs-2"><span>{{ ed.time }}</span></div>
+                        <div class="col-xs-10"><span>{{ ed.info }}</span>
+                            <p class="text-muted">{{ ed.notes }}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="technologies"><i class="devicons devicons-npm"></i><i class="devicons devicons-npm"></i></div>
+            </div>
+        </div>
     </div>
-</div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js'></script>
+</body>
+<script>
+    /**
+     * CV angularjs based app
+     * @author: netanel ben
+     */
+    app = angular.module('cv', []);
+    app.controller('cv_ctrl', function($scope) {
+        $scope.cv = {
+            headline: {
+                title: "netanel (nate) ben",
+                sub_title: "full-stack developer & UI/UX enthusiaste"
+            },
+            contact_info: {
+                title: 'contact',
+                items: ['netanelbeny@gmail.com',
+                    '+972 54 2002744',
+                    'github.com/netanel'
+                ]
+            },
+            skills: {
+                title: 'skills',
+                proficient: {
+                    title: 'proficient',
+                    items: ['Ruby (RoR)', 'NodeJS', 'Git']
+                },
+                comfortable: {
+                    title: 'comfortable',
+                    items: ['JavaScript', 'SASS', 'Pug']
+                },
+                familier: {
+                    title: 'familier',
+
+
+
+                    items: ['AngularJS', 'ReactJS', 'C#', 'Java']
+                }
+            },
+            languages: {
+                title: 'languages',
+                info: [{
+                    item: 'English'
+                }, {
+                    item: 'Hebrew'
+                }]
+            },
+            content: {
+                projects: [{
+                    title: 'Midburn Spark | ',
+                    description: 'Regional burn open source project imply a solution for camps management and online community.',
+                    link: 'github.com/Midburn/Spark'
+                }, {
+                    title: 'Kino | ',
+                    description: 'Rav-Hen theatre film manager',
+                    link: ''
+                }],
+                experience: [{
+                    time: '09/2015—',
+                    company: 'Konimbo | ',
+                    title: 'Full stack developer (RoR)',
+                    notes: ['started as a front-end developer', 'maintenance & bug solving', 'lead developer of accesibility product', 'o']
+                }, {
+                    time: '2015—2016',
+                    company: 'Ruppin College | ',
+                    title: 'C# & .NET Teacher Assistant',
+                    notes: ['class teacher assistant', 'tests & assignments checker']
+                }],
+                education: [{
+                    time: '2015',
+                    info: 'Software engineering, Ruppin college',
+                    notes: 'emphasis on web developement'
+                }]
+            }
+        }
+    })
+</script>
+</body>
+
+</html>

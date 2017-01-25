@@ -18,11 +18,6 @@ app.constant('config', {
             name: 'projects',
             href: '/projects',
             templateUrl: 'views/projects.html'
-        },
-        resume: {
-            name: 'resume',
-            href: '/resume',
-            templateUrl: 'views/resume.html'
         }
     }
 })
