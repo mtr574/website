@@ -10,6 +10,9 @@ Npm is used only as a task manager.
 ## Serving
 [Hosted with Firebase](https://website-457be.firebaseapp.com/)
 
+## Continues integration
+- [automatic-deploy-firebase-github-travis](https://marlosoft.net/posts/automatic-deploy-firebase-github-travis.html)
+
 ## In the webstie you'll find:
 - My updated CV
 - StackOverflow's timeline
