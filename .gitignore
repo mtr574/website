@@ -39,4 +39,5 @@ bower_components
 
 # Firebase hosting
 public/
-.firebase*
+database.*
+firebase.*
