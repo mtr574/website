@@ -42,4 +42,5 @@ Npm is used only as a task manager.
   ga('create', 'UA-91291842-1', 'auto');
   ga('send', 'pageview');
 
-</script>```
+</script>
+```
