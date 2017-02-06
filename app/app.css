@@ -40,6 +40,15 @@ logo:before, logo:after {
     margin-bottom: 2em;
 }
 
+.header a {
+  color: #000;
+}
+
+.header a:hover {
+  opacity: 0.8;
+  transition: 250ms all ease;
+}
+
 .main-content {
     min-height: 50vh;
 }
