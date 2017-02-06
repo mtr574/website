@@ -7,8 +7,9 @@ app.config(function($routeProvider, $locationProvider, config) {
     $routeProvider
         .when("/", config.routes.hello)
         .when("/hello", config.routes.hello)
-        .when("/blog", config.routes.blog)
+        .when("/resume", config.routes.resume)
         .when("/projects", config.routes.projects)
+        .when("/lostnfound", config.routes.lostnfound)
         .otherwise({
             redirectTo: 'static/404.html'
         });

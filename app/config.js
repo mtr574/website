@@ -9,15 +9,20 @@ app.constant('config', {
             href: '/hello',
             templateUrl: 'views/hello.html'
         },
-        blog: {
-            name: 'blog',
-            href: '/blog',
-            templateUrl: 'views/blog.html'
+        resume: {
+            name: 'resume',
+            href: '/resume',
+            templateUrl: 'views/resume.html'
         },
         projects: {
             name: 'projects',
             href: '/projects',
             templateUrl: 'views/projects.html'
+        },
+        lostnfound: {
+            name: 'lostnfound',
+            href: '/lostnfound',
+            templateUrl: 'views/lostnfound.html'
         }
     }
 })
