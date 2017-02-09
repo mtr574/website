@@ -19,16 +19,15 @@ app.controller('cv_ctrl', function($scope) {
             title: 'skills',
             proficient: {
                 title: 'proficient',
-                items: ['Ruby (RoR)', 'NodeJS', 'Git']
+                items: ['Ruby (RoR)', 'JavaScript', 'Git']
             },
             comfortable: {
                 title: 'comfortable',
-                items: ['JavaScript', 'SASS', 'Pug']
+                items: ['NodeJS', 'Jade/Pug', 'AngularJS', 'LESS/SASS', 'MySQL']
             },
             familier: {
                 title: 'familier',
-
-                items: ['AngularJS', 'ReactJS', 'C#', 'Java']
+                items: ['C#', 'ReactJS']
             }
         },
         languages: {
