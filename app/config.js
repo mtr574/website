@@ -13,16 +13,16 @@ app.constant('config', {
             name: 'resume',
             href: '/resume',
             templateUrl: 'views/resume.html'
-        },
-        projects: {
-            name: 'projects',
-            href: '/projects',
-            templateUrl: 'views/projects.html'
-        },
-        lostnfound: {
-            name: 'lostnfound',
-            href: '/lostnfound',
-            templateUrl: 'views/lostnfound.html'
         }
+        // projects: {
+        //     name: 'projects',
+        //     href: '/projects',
+        //     templateUrl: 'views/projects.html'
+        // },
+        // lostnfound: {
+        //     name: 'lostnfound',
+        //     href: '/lostnfound',
+        //     templateUrl: 'views/lostnfound.html'
+        // }
     }
 })

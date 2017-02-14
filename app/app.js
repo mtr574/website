@@ -43,13 +43,13 @@ app.controller('cv_ctrl', function($scope) {
         content: {
             projects: [
                 {
-                    title: 'Midburn Spark | ',
-                    description: 'Regional burn open source project imply a solution for camps management and online community.',
+                    title: 'Midburn Spark | Regional burn management',
+                    description: 'Midburn is the Israeli regional burning-man community. This web-app is an open source project & a solution for camps management and online community.',
                     link: 'github.com/Midburn/Spark'
                 }, {
-                    title: 'Kino | ',
-                    description: 'Rav-Hen theatre film manager',
-                    link: ''
+                    title: 'Kino | Theatre managment',
+                    description: 'Rav-Hen theatre film manager, a project I started while studied and worked for local theatre branch of the company. The project evolved whiting few months and had a lot of impact on the work-flow of the teathre. The solution was suggested as pro-bono to the company.',
+                    link: 'github.com/mtr574/kino'
                 }
             ],
             experience: [
@@ -57,7 +57,7 @@ app.controller('cv_ctrl', function($scope) {
                     time: '09/2015—',
                     company: 'Konimbo | ',
                     title: 'Full stack developer (RoR)',
-                    notes: ['started as a front-end developer', 'maintenance & bug solving', 'lead developer of accesibility product', 'o']
+                    notes: ['started as a front-end developer', 'promoted to work in a small team server-side RoR', 'maintane & solving bugs everyday', 'lead my own project of accesibility product for the company']
                 }, {
                     time: '2015—2016',
                     company: 'Ruppin College | ',
