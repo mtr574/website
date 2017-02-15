@@ -32,7 +32,7 @@
     "protractor": "protractor e2e-tests/protractor.conf.js",
     "inject-assets": "node npm_scripts/inject.js",
     "copy-files": "node npm_scripts/copy.js",
-    "deploy": "npm run copy-files inject-assets && firebase deploy"
+    "deploy": "npm run copy-files && npm run inject-assets && firebase deploy"
   },
   "dependencies": {}
 }
