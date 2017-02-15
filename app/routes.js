@@ -8,6 +8,7 @@ app.config(function($routeProvider, $locationProvider, config) {
         .when("/", config.routes.hello)
         .when("/hello", config.routes.hello)
         .when("/resume", config.routes.resume)
+        .when("/mycats", {redirectTo: 'templates/meow.html'})
         // .when("/projects", config.routes.projects)
         // .when("/lostnfound", config.routes.lostnfound)
         .otherwise({

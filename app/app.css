@@ -2,26 +2,39 @@ html, body {
     min-height: 100vh;
 }
 
-.app__mode--dark,
-.app__mode--dark .footer {
-  background: #000;
+
+/* App Mode */
+
+.app__mode--dark, .app__mode--dark .footer {
+    background: #000;
 }
 
-/*Logo*/
+
+/*
+ * Header
+ */
+
+
+/* Logo */
 
 .header__logo {
-  position: relative;
-  font-size: 75px;
-  border: 5px solid;
-  width: 130px;
-  height: 145px;
-  overflow: hidden;
-  text-align: center;
-  word-break: break-all;
-  line-height: 50pt;
-  letter-spacing: 1.8px;
-  background: #ddd;
-  display: block;
+    position: relative;
+    font-size: 75px;
+    border: 5px solid;
+    width: 130px;
+    height: 145px;
+    overflow: hidden;
+    text-align: center;
+    word-break: break-all;
+    line-height: 50pt;
+    letter-spacing: 1.8px;
+    background: #ddd;
+    display: block;
+    color: #f35626;
+    background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: hue 60s infinite linear;
 }
 
 .header__logo:before {
@@ -45,12 +58,12 @@ html, body {
 }
 
 .header a {
-  color: #000;
+    color: #000;
 }
 
 .header a:hover {
-  opacity: 0.8;
-  transition: 250ms all ease;
+    opacity: 0.8;
+    transition: 250ms all ease;
 }
 
 .main-content {
@@ -65,6 +78,15 @@ html, body {
 .side-pane {
     max-width: 250px;
     padding: 0.75rem;
+}
+
+
+/*
+ * Footer
+ */
+
+.footer .container {
+    border-top: 1px #eee solid;
 }
 
 .footer__links {
@@ -87,8 +109,68 @@ html, body {
     padding: 2em 0;
 }
 
+.footer__octocat {
+    padding: 2rem;
+}
 
-/*Prism*/
+.footer__octocat:hover img {
+    -webkit-animation-name: bounce;
+    animation-name: bounce;
+    -webkit-transform-origin: center bottom;
+    transform-origin: center bottom -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both
+}
+
+.bounce {
+    -webkit-animation-name: bounce;
+    animation-name: bounce;
+    -webkit-transform-origin: center bottom;
+    transform-origin: center bottom
+}
+
+
+/*
+ * Animations
+ */
+
+@keyframes bounce {
+    0%, 100%, 20%, 53%, 80% {
+        -webkit-animation-timing-function: cubic-bezier(0.215, .61, .355, 1);
+        animation-timing-function: cubic-bezier(0.215, .61, .355, 1);
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0)
+    }
+    40%, 43% {
+        -webkit-animation-timing-function: cubic-bezier(0.755, .050, .855, .060);
+        animation-timing-function: cubic-bezier(0.755, .050, .855, .060);
+        -webkit-transform: translate3d(0, -30px, 0);
+        transform: translate3d(0, -30px, 0)
+    }
+    70% {
+        -webkit-animation-timing-function: cubic-bezier(0.755, .050, .855, .060);
+        animation-timing-function: cubic-bezier(0.755, .050, .855, .060);
+        -webkit-transform: translate3d(0, -15px, 0);
+        transform: translate3d(0, -15px, 0)
+    }
+    90% {
+        -webkit-transform: translate3d(0, -4px, 0);
+        transform: translate3d(0, -4px, 0)
+    }
+}
+
+@-webkit-keyframes hue {
+    from {
+        -webkit-filter: hue-rotate(0deg);
+    }
+    to {
+        -webkit-filter: hue-rotate(-360deg);
+    }
+}
+
+
+/* Footer Prism animation*/
 
 @-webkit-keyframes move {
     100% {
@@ -278,14 +360,7 @@ html, body {
     }
 }
 
-
-/*Page Setup*/
-
 svg {
     width: 150px;
     height: 150px;
-}
-
-.footer .container {
-    border-top: 1px #eee solid;
 }
