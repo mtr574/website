@@ -4,6 +4,6 @@ var fs = require('fs'),
     appFolder = wd + '/app/',
     publicFolder = wd + '/public/',
     publicFileName = ['404.html', 'index.html', 'app.js', 'config.js', 'routes.js', 'app.css'];
-for (var i = 0; i < publicFiles.length; i++) {
-    fs.createReadStream(publicFileFolder + publicFiles[i]).pipe(fs.createWriteStream(appFolder + publicFileName[i]));
+for (var i = 0; i < publicFileName.length; i++) {
+    fs.createReadStream(appFolder + publicFileName[i]).pipe(fs.createWriteStream(publicFolder + publicFileName[i]));
 }
