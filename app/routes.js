@@ -11,7 +11,4 @@ app.config(function($routeProvider, $locationProvider, config) {
         .when("/mycats", {redirectTo: 'templates/meow.html'})
         // .when("/projects", config.routes.projects)
         // .when("/lostnfound", config.routes.lostnfound)
-        .otherwise({
-            redirectTo: 'static/404.html'
-        });
 });
