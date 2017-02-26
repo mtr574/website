@@ -364,3 +364,47 @@ svg {
     width: 150px;
     height: 150px;
 }
+
+
+/* Cats page */
+
+.meow #clockdiv {
+    color: #fff;
+    display: inline-block;
+    text-align: center;
+    font-size: 30px;
+}
+
+.meow #clockdiv>div {
+    padding: 10px;
+    border-radius: 3px;
+    background: #ff8a80;
+    display: inline-block;
+}
+
+.meow #clockdiv div>span {
+    padding: 15px;
+    border-radius: 3px;
+    background: #f44336;
+    display: inline-block;
+}
+
+.meow .smalltext {
+    padding-top: 5px;
+    font-size: 16px;
+}
+
+.meow img {
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+
+/* @media */
+
+@media screen and (max-width: 768px) {
+    .header__logo {
+        width: 210px;
+        height: 78px;
+    }
+}

@@ -9,7 +9,7 @@ app.config(function($routeProvider, $locationProvider, config) {
         .when("/hello", config.routes.hello)
         .when("/resume", config.routes.resume)
         .when("/mycats", {
-            templateUrl: 'meow.html'
+            templateUrl: 'views/meow.html'
         })
     // .when("/projects", config.routes.projects)
     // .when("/lostnfound", config.routes.lostnfound)

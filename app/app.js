@@ -5,6 +5,37 @@ app.controller('main', function($scope, config, $routeParams) {
     $scope.menu_items = config.routes;
 });
 
+app.controller('meow', function($scope) {
+    function getTimeRemaining(endtime) {
+        var t = Date.parse(endtime) - Date.now(),
+            days = Math.floor(t / (1000 * 60 * 60 * 24));
+        return {
+            'total': t,
+            'days': days
+        };
+    }
+
+    function initializeClock(id, endtime) {
+        var clock = document.getElementById(id),
+            daysSpan = clock.querySelector('.days');
+
+        function updateClock() {
+            var t = getTimeRemaining(endtime);
+            daysSpan.innerHTML = t.days;
+            if (t.total <= 0) {
+                clearInterval(timeinterval);
+            }
+        }
+
+        updateClock();
+        var timeinterval = setInterval(updateClock, 1000);
+    }
+    // count down timer:
+    var date = "11-11-2017",
+        deadline = new Date(date);
+    initializeClock('clockdiv', deadline);
+})
+
 app.controller('cv_ctrl', function($scope) {
     $scope.cv = {
         headline: {
@@ -32,46 +63,38 @@ app.controller('cv_ctrl', function($scope) {
         },
         languages: {
             title: 'languages',
-            info: [
-                {
-                    item: 'English'
-                }, {
-                    item: 'Hebrew'
-                }
-            ]
+            info: [{
+                item: 'English'
+            }, {
+                item: 'Hebrew'
+            }]
         },
         content: {
-            projects: [
-                {
-                    title: 'Midburn Spark | Regional burn management',
-                    description: 'Midburn is the Israeli regional burning-man community. This web-app is an open source project & a solution for camps management and online community.',
-                    link: 'github.com/Midburn/Spark'
-                }, {
-                    title: 'Kino | Theatre managment',
-                    description: 'Rav-Hen theatre film manager, a project I started while studied and worked for local theatre branch of the company. The project evolved whiting few months and had a lot of impact on the work-flow of the teathre. The solution was suggested as pro-bono to the company.',
-                    link: 'github.com/mtr574/kino'
-                }
-            ],
-            experience: [
-                {
-                    time: '09/2015—',
-                    company: 'Konimbo | ',
-                    title: 'Full stack developer (RoR)',
-                    notes: ['started as a front-end developer', 'promoted to work in a small team server-side RoR', 'maintane & solving bugs everyday', 'lead my own project of accesibility product for the company']
-                }, {
-                    time: '2015—2016',
-                    company: 'Ruppin College | ',
-                    title: 'C# & .NET Teacher Assistant',
-                    notes: ['class teacher assistant', 'tests & assignments checker']
-                }
-            ],
-            education: [
-                {
-                    time: '2015',
-                    info: 'Software engineering, Ruppin college',
-                    notes: 'emphasis on web developement'
-                }
-            ]
+            projects: [{
+                title: 'Midburn Spark | Regional burn management',
+                description: 'Midburn is the Israeli regional burning-man community. This web-app is an open source project & a solution for camps management and online community.',
+                link: 'github.com/Midburn/Spark'
+            }, {
+                title: 'Kino | Theatre managment',
+                description: 'Rav-Hen theatre film manager, a project I started while studied and worked for local theatre branch of the company. The project evolved whiting few months and had a lot of impact on the work-flow of the teathre. The solution was suggested as pro-bono to the company.',
+                link: 'github.com/mtr574/kino'
+            }],
+            experience: [{
+                time: '09/2015—',
+                company: 'Konimbo | ',
+                title: 'Full stack developer (RoR)',
+                notes: ['started as a front-end developer', 'promoted to work in a small team server-side RoR', 'maintane & solving bugs everyday', 'lead my own project of accesibility product for the company']
+            }, {
+                time: '2015—2016',
+                company: 'Ruppin College | ',
+                title: 'C# & .NET Teacher Assistant',
+                notes: ['class teacher assistant', 'tests & assignments checker']
+            }],
+            education: [{
+                time: '2015',
+                info: 'Software engineering, Ruppin college',
+                notes: 'emphasis on web developement'
+            }]
         }
     }
 })
