@@ -44,17 +44,17 @@ app.controller('cv_ctrl', function($scope) {
         },
         contact_info: {
             title: 'contact',
-            items: ['netanelbeny@gmail.com', '+972 54 2002744', 'github.com/netanel']
+            items: ['netanelbeny@gmail.com', '+972 54 2002744', 'github.com/mtr574']
         },
         skills: {
             title: 'skills',
             proficient: {
                 title: 'proficient',
-                items: ['Ruby (RoR)', 'JavaScript', 'Git']
+                items: ['Ruby-on-Rails', 'JavaScript', 'Git']
             },
             comfortable: {
                 title: 'comfortable',
-                items: ['NodeJS', 'Jade/Pug', 'AngularJS', 'LESS/SASS', 'MySQL']
+                items: ['NodeJS', 'AngularJS', 'LESS/SASS', 'MySQL', 'NoSQL', 'Linux']
             },
             familier: {
                 title: 'familier',
@@ -81,7 +81,7 @@ app.controller('cv_ctrl', function($scope) {
             }],
             experience: [{
                 time: '09/2015—',
-                company: 'Konimbo - E-commerce platform | Ruby-On-Rails, MySQL',
+                company: 'Konimbo - E-commerce platform | Ruby-on-Rails, MySQL',
                 title: 'Full-Stack Developer',
                 notes: ['Started as a front-end developer implementing various of HTML5, CSS3 & JS components to a full online shop. During the time I lead-dev a project of JS accesibility-tool product implementing WAI-ARIA rules. After a year transfered to server-side working on the platform including maintenance, writing integrations and external-use API.']
             }, {
