@@ -71,24 +71,24 @@ app.controller('cv_ctrl', function($scope) {
         },
         content: {
             projects: [{
-                title: 'Midburn Spark | Regional burn management',
-                description: 'Midburn is the Israeli regional burning-man community. This web-app is an open source project & a solution for camps management and online community.',
+                title: 'Midburn Spark - Regional burn web-app | ExpressJS, AngularJS, MySQL',
+                description: 'Midburn is the Israeli regional burning-man community and this app is an open source project delivers a solution for camps management and online community. My role in this project is lead developer on the camps module.',
                 link: 'github.com/Midburn/Spark'
             }, {
-                title: 'Kino | Theatre managment',
-                description: 'Rav-Hen theatre film manager, a project I started while studied and worked for local theatre branch of the company. The project evolved whiting few months and had a lot of impact on the work-flow of the teathre. The solution was suggested as pro-bono to the company.',
+                title: 'Kino - Cinema workers web-app | C#, ASP.Net, MySQL',
+                description: 'Rav-Hen cinema workers management app is a project I authored during college studies and worked for local theatre branch of the company. The project evolved within few months and had a lot of impact on the cinema work-flow. The solution was delivered pro-bono to the company.',
                 link: 'github.com/mtr574/kino'
             }],
             experience: [{
                 time: '09/2015—',
-                company: 'Konimbo | ',
-                title: 'Full stack developer (RoR)',
-                notes: ['started as a front-end developer', 'promoted to work in a small team server-side RoR', 'maintane & solving bugs everyday', 'lead my own project of accesibility product for the company']
+                company: 'Konimbo - E-commerce platform | Ruby-On-Rails, MySQL',
+                title: 'Full-Stack Developer',
+                notes: ['Started as a front-end developer implementing various of HTML5, CSS3 & JS components to a full online shop. During the time I lead-dev a project of JS accesibility-tool product implementing WAI-ARIA rules. After a year transfered to server-side working on the platform including maintenance, writing integrations and external-use API.']
             }, {
                 time: '2015—2016',
-                company: 'Ruppin College | ',
-                title: 'C# & .NET Teacher Assistant',
-                notes: ['class teacher assistant', 'tests & assignments checker']
+                company: 'Ruppin College - Academic staff',
+                title: 'C#, ASP.Net Teacher Assistant',
+                notes: ['Worked as class teacher assistant - 2 weekly hours assisting students studying C# and ASP.Net', 'During this period my second role was tests & assignments checker']
             }],
             education: [{
                 time: '2015',
