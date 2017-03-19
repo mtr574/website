@@ -38,7 +38,6 @@ bower_components
 .node_repl_history
 
 # Firebase hosting
-public/
 database.*
 firebase.*
 .firebaserc

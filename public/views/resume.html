@@ -1,0 +1,125 @@
+<style class="cp-pen-styles">
+    @charset "UTF-8";
+    @import url("https://fonts.googleapis.com/css?family=Ubuntu");
+    body {
+        font-family: 'Ubuntu', sans-serif;
+        user-select: none;
+        color: #fff;
+    }
+    
+    p {
+        margin-bottom: 0;
+    }
+    
+    .headline {
+        background: #eee;
+        padding: 3em 2em;
+    }
+    
+    .panel-body {
+        padding-top: 0;
+    }
+    
+    .side-info h4 {
+        text-transform: capitalize;
+    }
+    
+    .side-info>div {
+        margin: 0 0 3em 0;
+    }
+    
+    .side-info .list-group-item {
+        border: 0;
+        padding: 0.1em 1em;
+    }
+    
+    .content-panel {
+        margin: 0 0 3em 0;
+    }
+    
+    .text-muted {
+        margin-top: 5px;
+    }
+    
+    .titledesc {
+        margin-bottom: 5px;
+    }
+    
+    i.devicons {
+      font-size: 13px;
+    }
+    h6 {
+      display: inline;
+      margin-right: 10px;
+    }
+    .content-panel .column p {
+      margin-top: 10px;
+    }
+    .column {
+      padding: 15px 15px 15px 20px;
+    }
+</style>
+
+<div class="">
+    <div class="columns" ng-controller="cv_ctrl">
+        <div class="column is-3 side-info">
+            <div class="skills">
+                <h4>{{ cv.skills.title }}</h4>
+                <ul class="list-group">
+                    <span>
+                      <h6>{{ cv.skills.proficient.title }}</h6>
+                      <i class="devicons devicons-ruby_on_rails"></i>
+                      <i class="devicons devicons-javascript"></i>
+                      <i class="devicons devicons-git"></i>
+                    </span>
+                    <li class="list-group-item" ng-repeat="s in cv.skills.proficient.items"><span ng-class="{{s | lowercase }}">{{ s }}</span></li>
+                </ul>
+                <ul class="list-group">
+                    <h6>{{ cv.skills.comfortable.title }}</h6>
+                    <li class="list-group-item" ng-repeat="s in cv.skills.comfortable.items"><span>{{ s }}</span></li>
+                </ul>
+                <ul class="list-group">
+                    <h6>{{ cv.skills.familier.title }}</h6>
+                    <li class="list-group-item" ng-repeat="s in cv.skills.familier.items"><span>{{ s }}</span></li>
+                </ul>
+            </div>
+            <div class="contact_info">
+                <h4>{{ cv.languages.title }}</h4>
+                <ul class="list-group">
+                    <li class="list-group-item" ng-repeat="i in cv.languages.info"><span>{{ i.item }}</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="column is-9 content">
+            <div class="content-panel projects">
+                <h4>Projects</h4>
+                <div class="columns panel-body" ng-repeat="pr in cv.content.projects">
+                    <div class="column is-10">
+                        <h5>{{ pr.title }}</h5>
+                        <p class="titledesc">Stack: {{ pr.stack }}</p>
+                        <p>{{ pr.description }}</p>
+                        <a ng-href="//{{ pr.link }}" target="_blank">{{ pr.link }}</a></div>
+                </div>
+            </div>
+            <div class="content-panel experience">
+                <h4>Experience</h4>
+                <div class="columns panel-body" ng-repeat="ex in cv.content.experience">
+                    <div class="column is-2"><span>{{ ex.time }}</span></div>
+                    <div class="column is-10"><span>{{ ex.company }}</span>
+                      <p class="titledesc">{{ ex.title }}</p>
+                      <p class="text-muted" ng-repeat="note in ex.notes">{{ note }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="content-panel education">
+                <h4>Education</h4>
+                <div class="columns panel-body" ng-repeat="ed in cv.content.education">
+                    <div class="column is-2"><span>{{ ed.time }}</span></div>
+                    <div class="column is-10"><span>{{ ed.info }}</span>
+                        <p class="text-muted">{{ ed.notes }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
