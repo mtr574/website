@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Mono');
+
 html, body {
+    font-family: 'PT Mono', monospace;
     min-height: 100vh;
 }
 
@@ -398,6 +401,7 @@ svg {
     border-radius: 3px;
     overflow: hidden;
 }
+
 
 /* @media */
 

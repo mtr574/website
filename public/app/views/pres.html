@@ -1,0 +1,14 @@
+<div class="">
+    <div class="tile is-parent">
+        <article class="tile is-child notification is-warning" ng-repeat="p in presentations">
+            <p class="title">{{ p.title }}</p>
+            <p class="subtitle">{{ p.subtitle }}</p>
+            <span class="subtitle">{{ p.tags }}</span>
+            <div class="content">
+                <a ng-href="{{ p.link }}">
+                  Go for it!
+                </a>
+            </div>
+        </article>
+    </div>
+</div>

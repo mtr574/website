@@ -1,4 +1,3 @@
-var app = angular.module('nate', ['ngRoute']);
 /**
  * Configuration
  */
@@ -13,6 +12,16 @@ app.constant('config', {
             name: 'resume',
             href: '/resume',
             templateUrl: 'views/resume.html'
+        },
+        presentations: {
+            name: 'presentations',
+            href: '/presentations',
+            templateUrl: 'views/pres.html'
+        },
+        pods: {
+            name: 'pods',
+            href: '/pods',
+            templateUrl: 'views/podcasts.html'
         }
         // projects: {
         //     name: 'projects',

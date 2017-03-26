@@ -30,9 +30,8 @@
     "update-webdriver": "webdriver-manager update",
     "preprotractor": "npm run update-webdriver",
     "protractor": "protractor e2e-tests/protractor.conf.js",
-    "inject-assets": "node npm_scripts/inject.js",
-    "copy-files": "node npm_scripts/copy.js",
-    "deploy": "npm run copy-files && npm run inject-assets && firebase deploy"
+    "inject-ga": "node bin/inject.js",
+    "deploy": "npm run inject-ga && firebase deploy"
   },
   "dependencies": {}
 }

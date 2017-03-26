@@ -3,7 +3,7 @@
 <!--[if IE 7]> <html lang="en" ng-app="nate" class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]> <html lang="en" ng-app="nate" class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html lang="en" ng-app="nate" class="no-js">
+<html lang="en" ng-app="nate" class="no-js" ng-cloak>
 <!--<![endif]-->
 
 <head>
@@ -12,13 +12,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <title>Nate Ben</title>
+    <title>netanelben.info | Web Developer</title>
     <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
     <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
     <link rel="stylesheet" href="bower_components/bulma/css/bulma.css" media="screen">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" media="screen">
     <link rel="stylesheet" href="//vorillaz.github.io/devicons/css/devicons.css">
-    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="content/css/app.css">
+    <link rel="shortcut icon" href="favicon.ico" />
 </head>
 
 <body class="app__mode--dark" ng-controller="main" ng-cloak>
@@ -39,12 +40,21 @@
     <app-footer></app-footer>
 
     <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
     <script src="bower_components/angular-route/angular-route.min.js"></script>
-    <script src="config.js"></script>
-    <script src="routes.js"></script>
-    <script src="app.js"></script>
-    <!-- @@GOOGLE_ANALYTICS@@ --><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create', 'UA-91291842-1', 'auto');ga('send', 'pageview');</script><!-- @@END__GOOGLE_ANALYTICS@@ -->
+    <!-- app main  -->
+    <script src="app/app.js"></script>
+    <!-- app configs -->
+    <script src="app/config.js"></script>
+    <!-- app directives -->
+    <script src="app/directives/mainMenu.js"></script>
+    <script src="app/directives/appFooter.js"></script>
+    <!-- app controllers -->
+    <script src="app/controllers/main.js"></script>
+    <script src="app/controllers/meow.js"></script>
+    <script src="app/controllers/resume.js"></script>
+    <script src="app/controllers/presentations.js"></script>
+    <!-- @@GOOGLE_ANALYTICS@@ --><!-- @@END__GOOGLE_ANALYTICS@@ -->
 </body>
 
 </html>
