@@ -24,8 +24,9 @@ html, body {
     position: relative;
     font-size: 75px;
     border: 5px solid;
-    width: 130px;
-    height: 145px;
+    padding: 0.6em;
+    width: 115px;
+    height: 130px;
     overflow: hidden;
     text-align: center;
     word-break: break-all;
@@ -405,9 +406,9 @@ svg {
 
 /* @media */
 
-@media screen and (max-width: 768px) {
+/*@media screen and (max-width: 768px) {
     .header__logo {
         width: 210px;
         height: 78px;
     }
-}
+}*/
