@@ -1,5 +1,9 @@
 [![Travis][travis-img]][travis-url] [![Website][website-img]][website-url]
 
+---
+# DEPRECATED
+---
+
 # Nate's Website
 My own web-site &amp; CV developed with Pug, SCSS, Angular &amp; Bootstrap.
 
